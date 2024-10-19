@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  app:
+    build:
+      context: .
+    image: iugmali/products-app
+    container_name: products-app
+    restart: always
+    volumes:
+      - ./db.sqlite:/db.sqlite
+    ports:
+      - "9001:9001"
+    environment:
+      - PORT=$PORT

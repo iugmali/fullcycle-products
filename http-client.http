@@ -1,0 +1,31 @@
+@HostAddress= http://localhost:9001
+@ProductId= 75e1af32-eee8-4df2-9d0f-01c9b9685549
+
+### CreateProduct
+POST {{HostAddress}}/product
+Content-Type: application/json
+
+{
+  "name": "test 999",
+  "price": 10099
+}
+
+### GetAllProducts
+
+GET {{HostAddress}}/product
+
+### GetProduct
+
+GET {{HostAddress}}/product/{{ProductId}}
+
+### EnableProduct
+
+PATCH {{HostAddress}}/product/{{ProductId}}/enable
+
+### DisableProduct
+
+PATCH {{HostAddress}}/product/{{ProductId}}/disable
+
+### SetProductPrice
+
+PATCH {{HostAddress}}/product/{{ProductId}}/setprice/0
